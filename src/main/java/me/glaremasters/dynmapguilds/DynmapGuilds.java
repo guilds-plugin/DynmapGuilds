@@ -15,9 +15,9 @@ import org.dynmap.markers.MarkerSet;
 
 public final class DynmapGuilds extends JavaPlugin {
     private GuildsAPI guildsAPI;
-    private DynmapAPI dynmapAPI;
     private MarkerAPI markerAPI;
     private MarkerSet markerSet;
+    private DynmapAPI dynmapAPI;
 
     @Override
     public void onEnable() {
@@ -31,7 +31,7 @@ public final class DynmapGuilds extends JavaPlugin {
 
     private void updateHomes() {
         MarkerIcon homeIcon = markerAPI.getMarkerIcon("house");
-        for (Guild guild : guildsAPI.getGuildHandler().getGuilds()) {
+        for (Guild guild : guildsAPI.getGuildHandler().getGuilds().values()) {
             Marker marker = markerSet.findMarker(guild.getId().toString());
             if (marker != null) {
                 marker.deleteMarker();

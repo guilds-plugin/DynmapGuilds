@@ -1,8 +1,0 @@
-name: DynmapGuilds
-version: @version@
-main: me.glaremasters.dynmapguilds.DynmapGuilds
-api-version: 1.16
-depend: [ dynmap, Guilds ]
-authors: [ Glare ]
-description: Dynmap add-on for Guilds
-website: https://glare.dev
